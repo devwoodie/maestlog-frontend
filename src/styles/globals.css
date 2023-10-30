@@ -66,7 +66,52 @@ table {
     font-size: 16px;
 }
 
+.body_all{
+    background-color: var(--bg-01);
+    width: 100%;
+    min-height: 100vh;
+}
+.inner{
+    display: flex;
+    justify-content: center
+}
+.container{
+    width: 1728px;
+}
 
+@media screen and (max-width: 1919px) {
+    .container {
+        width:1376px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .container {
+        width:1024px;
+    }
+}
+
+@media screen and (max-width: 1056px) {
+    .container {
+        width:calc(100% - 32px);
+    }
+}
+
+[data-theme=light]{
+    --bg-01: #f8f9fa;
+    --text-01: #212529;
+    --text-02: #495057;
+    --text-03: #868e96;
+    --text-04: #ced4da;
+}
+
+[data-theme=dark]{
+    --bg-01: #121212;
+    --text-01: #ececec;
+    --text-02: #d9d9d9;
+    --text-03: #acacac;
+    --text-04: #595959;
+}
 
 /* 로고 폰트 */
 @font-face {

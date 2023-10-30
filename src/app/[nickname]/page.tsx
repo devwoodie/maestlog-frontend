@@ -1,4 +1,3 @@
-
 export default function UserHome(props: any){
     const uniqueNickname = props.params.nickname.replace('%40', '')
     console.log(props)
