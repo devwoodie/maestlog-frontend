@@ -80,15 +80,16 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
     transform: translateY(-10px);
 }
-.post_cont a{
+.post_cont .post_click{
     width: 100%;
+    cursor: pointer;
 }
-.post_cont a .post_img{
+.post_cont .post_click .post_img{
     width: 100%;
     padding-top: 52.1921%;
     position: relative;
 }
-.post_cont a .post_img img{
+.post_cont .post_click .post_img img{
     position: absolute;
     top: 0;
     left: 0;
@@ -97,7 +98,7 @@
     display: block;
     object-fit: cover;
 }
-.post_cont a .post_inner{
+.post_cont .post_click .post_inner{
     padding: 20px 20px 15px;
     display: flex;
     flex: 1 1;

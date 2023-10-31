@@ -1,0 +1,118 @@
+.Modal{
+    z-index: 999;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background-color: var(--modal-bg);
+}
+.modal_inner{
+    width: 550px;
+    background-color: var(--bg-element1);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .1);
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.cls_btn{
+    position: absolute;
+    right: 0; top: 0;
+    padding: 15px;
+    cursor: pointer;
+    color: var(--text-01);
+}
+.login_inner{
+    border-left: 5px solid var(--primary1);
+    display: flex;
+    justify-content: space-between;
+}
+.login_inner .login_left{
+    padding: 25px 30px;
+    width: 70%;
+    background-color: var(--bg-02);
+}
+.login_inner h4{
+    font-size: 24px;
+    color: var(--text-01);
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+.login_wrap li{
+    margin-bottom: 40px;
+}
+.login_wrap li h5{
+    font-size: 18px;
+    color: var(--text-02);
+    margin-bottom: 16px;
+}
+.login_input_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.login_input_wrap .login_input{
+    border: solid var(--text-02);
+    border-radius: 4px 0 0 4px;
+    border-width: 1px 0 1px 1px;
+    font-size: 16px;
+    padding: 10px;
+    color: var(--text-01);
+    transition: .3s;
+    width: 230px;
+    background-color: var(--bg-element1);
+}
+.login_input_wrap .login_input::placeholder{
+    color: var(--text-03);
+}
+.login_input_wrap .login_input:focus{
+    outline: none;
+    border: 1px solid var(--primary1);
+}
+.login_input_wrap .login_btn{
+    background-color: var(--primary1);
+    border: 1px solid var(--primary1);
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.google_btn{
+    padding: 0;
+    cursor: pointer;
+    width: 190px;
+}
+.signup_text{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    color: var(--primary1);
+    cursor: pointer;
+    margin-top: 50px;
+}
+.signup_text:hover{
+    text-decoration: underline;
+}
+
+.login_right{
+    text-align: center;
+    background-color: var(--bg-element2);
+    padding: 25px 30px;
+    width: 30%;
+}
+.login_right span{
+    font-size: 16px;
+    color: var(--text-03);
+    font-family: MapoDacapo, "sans-serif";
+    display: block;
+    margin-top: 110px;
+}
+.login_right span b{
+    font-size: 27px;
+    color: var(--text-01);
+    font-family: MapoDacapo, "sans-serif";
+    display: block;
+    margin-top: 6px;
+}
+

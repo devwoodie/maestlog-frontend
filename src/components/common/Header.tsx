@@ -5,11 +5,17 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {MdLightMode, MdModeNight} from "react-icons/md";
 import LocalStorage from "@/utils/localStorage";
+import {usePathname} from "next/navigation";
+import LoginModal from "@/components/modal/LoginModal";
 
 export default function Header(){
 
-    const storageTheme = LocalStorage.getItem("mlTheme");
+    const pathname: string = usePathname();
+    const storageTheme: string|null = LocalStorage.getItem("mlTheme");
+    const storageNickname: string|null = LocalStorage.getItem("mlNickname");
     const [theme, setTheme] = useState<string>("");
+    const [logo, setLogo] = useState<string>("");
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
         if(storageTheme === null){
@@ -20,6 +26,25 @@ export default function Header(){
             setTheme(storageTheme);
         }
     }, []);
+
+    useEffect(() => {
+        if(storageNickname === null){
+            setLogo("Maestlog");
+        }else{
+            setLogo(`${storageNickname}.log`);
+        }
+    }, [storageNickname]);
+
+    useEffect(() => {
+        if(pathname === "/"){
+            LocalStorage.removeItem("mlNickname");
+            setLogo("Maestlog");
+        }
+    }, [pathname]);
+
+    const handleModalOpen = () => {
+        setIsOpen(true);
+    }
 
     const handleModeChange = () => {
         if(theme === "light"){
@@ -35,13 +60,15 @@ export default function Header(){
 
     return(
         <div className={styles.header}>
-            <h1><Link href={"/"}>Maestlog</Link></h1>
+            <h1><Link href={logo === "Maestlog" ? "/" : `/@${logo.replace(".log", "")}`}>{logo}</Link></h1>
             <div className={styles.right}>
                 <button type="button" onClick={handleModeChange} className={styles.mode_btn}>
                     {theme === "light" ? <MdLightMode size={28} /> : <MdModeNight size={28} /> }
                 </button>
-                <button type="button" className={styles.login_btn}>로그인</button>
+                <button type="button" className={styles.login_btn} onClick={handleModalOpen}>로그인</button>
             </div>
+
+            <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
     )
 }

@@ -101,8 +101,13 @@ table {
     }
 }
 
+:root{
+    --primary1: #4285F4;
+}
+
 [data-theme=light]{
     --bg-01: #f8f9fa;
+    --bg-02: #fff;
     --bg-element1: #fff;
     --bg-element2: #f8f9fa;
     --bg-element3: #e9ecef;
@@ -115,10 +120,12 @@ table {
     --text-02: #495057;
     --text-03: #868e96;
     --text-04: #ced4da;
+    --modal-bg: hsla(0, 0%, 90%, 0.9);
 }
 
 [data-theme=dark]{
     --bg-01: #121212;
+    --bg-02: #121212;
     --bg-element1: #1e1e1e;
     --bg-element2: #1e1e1e;
     --bg-element3: #252525;
@@ -131,6 +138,7 @@ table {
     --text-02: #d9d9d9;
     --text-03: #acacac;
     --text-04: #595959;
+    --modal-bg: rgba(37, 37, 37, 0.89);
 }
 
 /* 로고 폰트 */
