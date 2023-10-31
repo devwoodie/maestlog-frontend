@@ -1,6 +1,8 @@
+import LocalStorage from "@/utils/localStorage";
 
 export default function Post(props: any){
     console.log(props.params)
+
     return(
         <div>
             Post Detail

@@ -26,7 +26,7 @@ export default function Home(props: any) {
                                         <div className={styles.post_small}>
                                             <span className={styles.post_date}>{item.upload_date}</span>
                                             <div className={styles.post_comment}>
-                                                <span><GoCommentDiscussion size={18} /><b>{item.reply_nm}</b></span>&nbsp; | &nbsp;<span><PiMusicNotesFill size={18} /><b>{item.like_nm}</b></span>
+                                                <span><PiMusicNotesFill size={18} /><b>{item.like_nm}</b></span>&nbsp; | &nbsp;<span><GoCommentDiscussion size={18} /><b>{item.reply_nm}</b></span>
                                             </div>
                                         </div>
                                         <div className={styles.post_writer_wrap}>

@@ -11,22 +11,25 @@ export default function Navigate(props: any){
 
     return(
         <div className={styles.nav_wrap}>
+            <Link href="/" className={styles.notice}>
+                <MdVolumeDownAlt size={20} />
+                <div>
+                    <span>[공지] 최신 업데이트 소식입니다.</span>
+                    <small>2023.10.31</small>
+                </div>
+            </Link>
             <ul className={styles.navigation}>
                 <li className={pathname === "/" ? styles.on : ""} >
                     <Link href={"/"}>
-                        <MdLeaderboard size={25} /><span>인기글</span>
+                        <MdLeaderboard size={22} /><span>인기</span>
                     </Link>
                 </li>
                 <li className={pathname === "/recent" ? styles.on : ""} >
                     <Link href={"/recent"}>
-                        <MdUpdate size={25} /><span>최신글</span>
+                        <MdUpdate size={22} /><span>최신</span>
                     </Link>
                 </li>
             </ul>
-            <Link href="/" className={styles.notice}>
-                <MdVolumeDownAlt size={20} />
-                <span>[공지] 최신 업데이트 소식입니다.</span>
-            </Link>
         </div>
     )
 }
