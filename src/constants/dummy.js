@@ -1,0 +1,35 @@
+export const postListDummy = [
+    {
+        post_nm: 1,
+        cover_photo: "/images/dummy/img8.png",
+        post_title: "테스트 제목입니다. 제목이 길어지면 어떻게 될까요?",
+        explanation: "지난 과거를 돌아보며 내가 공부하면서 좋았던 방법들과 최악의 방법들을 공유하였습니다. 이 글이 당신의 개발 인생 앞날에 좋은 영향력을 끼쳤으면 좋겠습니다. 😃",
+        upload_date: "2023년 10월 3일",
+        nickname: "dbehddn",
+        profile_photo: "/images/dummy/img2.png",
+        like_nm: "32",
+        reply_nm: "2",
+    },
+    {
+        post_nm: 2,
+        cover_photo: "/images/dummy/img2.png",
+        post_title: "테스트 제목입니다.",
+        explanation: "테스트 내용입니다.",
+        upload_date: "2023년 9월 29일",
+        nickname: "qkrdlsln",
+        profile_photo: "/images/dummy/img2.png",
+        like_nm: "2",
+        reply_nm: "12",
+    },
+    {
+        post_nm: 3,
+        cover_photo: "/images/dummy/img4.png",
+        post_title: "테스트 제목입니다. 제목이 길어지면 어떻게 될까요?",
+        explanation: "이 글이 당신의 개발 인생 앞날에 좋은 영향력을 끼쳤으면 좋겠습니다.",
+        upload_date: "2023년 8월 2일",
+        nickname: "dlwotmd",
+        profile_photo: "/images/dummy/img2.png",
+        like_nm: "10",
+        reply_nm: "0",
+    }
+]
