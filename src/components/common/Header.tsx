@@ -17,6 +17,8 @@ export default function Header(){
     const [logo, setLogo] = useState<string>("");
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
+    // const bodyAllTag = document.querySelector(".body_all");
+    console.log(pathname)
     useEffect(() => {
         if(storageTheme === null){
             LocalStorage.setItem("mlTheme", "light");
@@ -39,6 +41,11 @@ export default function Header(){
         if(pathname === "/" || pathname === "/recent" || pathname === "/write"){
             LocalStorage.removeItem("mlNickname");
             setLogo("Maestlog");
+        }
+        if(pathname === "/"){
+            document.querySelector(".body_all")?.classList.add("default");
+        }else{
+            document.querySelector(".body_all")?.classList.remove("default");
         }
     }, [pathname]);
 

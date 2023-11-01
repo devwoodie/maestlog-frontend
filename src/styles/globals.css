@@ -71,9 +71,12 @@ table {
 }
 
 .body_all{
-    background-color: var(--bg-01);
+    background-color: var(--bg-02);
     width: 100%;
     min-height: 100vh;
+}
+.body_all.default{
+    background-color: var(--bg-01);
 }
 .inner{
     display: flex;

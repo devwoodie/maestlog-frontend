@@ -11,7 +11,7 @@
     width: 100%;
     border: solid var(--text-02);
     border-width: 0 0 2px 0;
-    background-color: var(--bg-01);
+    background-color: var(--bg-02);
     color: var(--text-01);
     font-size: 25px;
     padding: 10px;
@@ -28,7 +28,7 @@
 .hashtag_wrap input{
     display: block;
     width: 100%;
-    background-color: var(--bg-01);
+    background-color: var(--bg-02);
     color: var(--text-01);
     font-size: 16px;
     padding: 10px;

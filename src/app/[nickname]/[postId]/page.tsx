@@ -1,6 +1,10 @@
 import styles from "@/styles/PostDetail.module.css";
 import {postDetailDummy} from "@/constants/dummy";
 import dynamic from "next/dynamic";
+import {MdKeyboardArrowUp} from "react-icons/md";
+import {PiMusicNotesFill} from "react-icons/pi";
+import {SlPaperClip} from "react-icons/sl";
+import FloatTab from "@/components/postDetail/FloatTab";
 const PostViewer = dynamic(
     () => import("@/components/postDetail/PostViewer"),
     {ssr: false}
@@ -32,20 +36,7 @@ export default function Post(props: any){
                 </div>
             </div>
 
-            <ul className={styles.float_wrap}>
-                <li>
-                    <i></i>
-                    <span>맨 위로</span>
-                </li>
-                <li>
-                    <i></i>
-                    <span>좋아요</span>
-                </li>
-                <li>
-                    <i></i>
-                    <span>URL 복사</span>
-                </li>
-            </ul>
+            <FloatTab />
         </div>
     )
 }

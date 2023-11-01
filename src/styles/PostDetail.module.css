@@ -79,5 +79,53 @@
 
 .float_wrap{
     position: fixed;
-    right: 2%; bottom: 3%;
+    right: 2%; bottom: 5%;
+    background-color: var(--bg-element2);
+    border: 1px solid var(--bg-element4);
+    border-radius: 80px;
+    padding: 10px 8px;
+    /*border-radius: 4px;*/
+}
+.float_wrap li{
+    border: 1px solid var(--bg-element4);
+    border-radius: 50%;
+    background-color: var(--bg-02);
+    width: 50px; height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.float_wrap li:hover{
+    border: 1px solid var(--bg-element6);
+}
+.float_wrap li:hover i{
+    color: var(--bg-element6);
+}
+.float_wrap li:nth-of-type(2){
+    margin: 10px 0 0;
+}
+.float_wrap li i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-03);
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.float_wrap span{
+    display: flex;
+    justify-content: center;
+    color: var(--text-02);
+    font-size: 14px;
+    margin: 5px 0 10px;
+    font-weight: 700;
+}
+.like{
+    background-color: var(--bg-element5) !important;
+}
+.like:hover{
+    border: 1px solid var(--bg-element6) !important;
+}
+.like i{
+    color: var(--bg-element1) !important;
 }
