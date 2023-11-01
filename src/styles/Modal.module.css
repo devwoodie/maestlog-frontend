@@ -50,6 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 .login_input_wrap .login_input{
     border: solid var(--text-02);
@@ -59,8 +60,8 @@
     padding: 10px;
     color: var(--text-01);
     transition: .3s;
-    width: 230px;
     background-color: var(--bg-element1);
+    width: 75%;
 }
 .login_input_wrap .login_input::placeholder{
     color: var(--text-03);
@@ -77,6 +78,30 @@
     padding: 10px 14px;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    width: 25%;
+}
+.email_submit{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: var(--primary2);
+    border: 1px solid var(--primary1);
+    color: var(--primary3);
+    border-radius: 4px;
+}
+.email_submit span{
+    color: inherit;
+    font-size: 14px;
+    position: absolute;
+    padding: 0 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+.email_submit span em{
+    display: flex;
+    margin-right: 5px;
 }
 .google_btn{
     padding: 0;

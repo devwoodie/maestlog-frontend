@@ -1,0 +1,40 @@
+.Write{
+    width: 100%;
+    padding-top: 15px;
+}
+.title_wrap{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.title_wrap input{
+    display: block;
+    width: 100%;
+    border: solid var(--text-02);
+    border-width: 0 0 2px 0;
+    background-color: var(--bg-01);
+    color: var(--text-01);
+    font-size: 25px;
+    padding: 10px;
+    outline: none;
+    font-weight: 700;
+}
+.title_wrap input::placeholder{
+    color: var(--text-02);
+}
+.hashtag_wrap{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.hashtag_wrap input{
+    display: block;
+    width: 100%;
+    background-color: var(--bg-01);
+    color: var(--text-01);
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+.hashtag_wrap input::placeholder{
+    color: var(--text-03);
+}

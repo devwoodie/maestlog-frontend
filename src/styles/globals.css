@@ -103,6 +103,8 @@ table {
 
 :root{
     --primary1: #4285F4;
+    --primary2: #bfd3fa;
+    --primary3: #2364f4;
 }
 
 [data-theme=light]{

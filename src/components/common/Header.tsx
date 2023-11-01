@@ -36,7 +36,7 @@ export default function Header(){
     }, [storageNickname]);
 
     useEffect(() => {
-        if(pathname === "/"){
+        if(pathname === "/" || pathname === "/recent" || pathname === "/write"){
             LocalStorage.removeItem("mlNickname");
             setLogo("Maestlog");
         }
@@ -58,7 +58,7 @@ export default function Header(){
         }
     }
 
-    return(
+    return pathname !== "/write" && (
         <div className={styles.header}>
             <h1><Link href={logo === "Maestlog" ? "/" : `/@${logo.replace(".log", "")}`}>{logo}</Link></h1>
             <div className={styles.right}>
