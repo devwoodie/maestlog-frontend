@@ -1,9 +1,6 @@
 import styles from "@/styles/PostDetail.module.css";
 import {postDetailDummy} from "@/constants/dummy";
 import dynamic from "next/dynamic";
-import {MdKeyboardArrowUp} from "react-icons/md";
-import {PiMusicNotesFill} from "react-icons/pi";
-import {SlPaperClip} from "react-icons/sl";
 import FloatTab from "@/components/postDetail/FloatTab";
 const PostViewer = dynamic(
     () => import("@/components/postDetail/PostViewer"),
@@ -34,6 +31,12 @@ export default function Post(props: any){
                         content={postDetailDummy?.post_content}
                     />
                 </div>
+            </div>
+
+            <div className={styles.comment_wrap}>
+                <h4>댓글 &nbsp;20</h4>
+                <textarea></textarea>
+                <div style={{textAlign: "right", marginTop: "10px"}}><button type="button" className={styles.submit_btn}>댓글 작성</button></div>
             </div>
 
             <FloatTab />

@@ -5,12 +5,14 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {MdLightMode, MdModeNight} from "react-icons/md";
 import LocalStorage from "@/utils/localStorage";
-import {usePathname} from "next/navigation";
+import {usePathname, useRouter} from "next/navigation";
 import LoginModal from "@/components/modal/LoginModal";
+import {router} from "next/client";
 
 export default function Header(){
 
     const pathname: string = usePathname();
+    const router = useRouter();
     const storageTheme: string|null = LocalStorage.getItem("mlTheme");
     const storageNickname: string|null = LocalStorage.getItem("mlNickname");
     const [theme, setTheme] = useState<string>("");
@@ -67,7 +69,10 @@ export default function Header(){
 
     return pathname !== "/write" && (
         <div className={styles.header}>
-            <h1><Link href={logo === "Maestlog" ? "/" : `/@${logo.replace(".log", "")}`}>{logo}</Link></h1>
+            <h1>
+                {pathname !== "/" && <span onClick={() => router.push("/")} className={styles.logo}><img src={"/icons/logo.png"} alt="logo"/></span>}
+                <Link href={logo === "Maestlog" ? "/" : `/@${logo.replace(".log", "")}`}>{logo}</Link>
+            </h1>
             <div className={styles.right}>
                 <button type="button" onClick={handleModeChange} className={styles.mode_btn}>
                     {theme === "light" ? <MdLightMode size={28} /> : <MdModeNight size={28} /> }

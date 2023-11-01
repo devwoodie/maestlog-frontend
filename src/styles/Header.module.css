@@ -8,6 +8,15 @@
     font-size: 30px;
     font-family: MapoDacapo, "sans-serif";
     color: var(--text-01);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    width: 32px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 .right{
     display: flex;

@@ -61,7 +61,7 @@
     color: var(--text-01);
     transition: .3s;
     background-color: var(--bg-element1);
-    width: 75%;
+    width: 72%;
 }
 .login_input_wrap .login_input::placeholder{
     color: var(--text-03);
@@ -78,7 +78,7 @@
     padding: 10px 14px;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
-    width: 25%;
+    width: 28%;
 }
 .email_submit{
     position: absolute;

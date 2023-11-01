@@ -22,6 +22,7 @@ export default function LoginModal({isOpen, setIsOpen}: Props){
         if(!isOpen){
             setEmail("");
             setIsSubmit(false);
+            setIsSignup(false);
         }
     }, [isOpen]);
 

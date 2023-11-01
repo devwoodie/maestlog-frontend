@@ -9,14 +9,20 @@ import toast, {Toaster} from "react-hot-toast";
 
 export default function FloatTab(){
 
+    const [isMove, setIsMove] = useState<boolean>(false);
+    const [isCopy, setIsCopy] = useState<boolean>(false);
     const [isLike, setIsLike] = useState<boolean>(false);
     const [likeNum, setLikeNum] = useState<number>(12);
 
     const handleMoveTop = () => {
+        setIsMove(true);
         window.scrollTo({
             behavior: "smooth",
             top: 0
-        })
+        });
+        setTimeout(() => {
+            setIsMove(false);
+        }, 500);
     }
     const handleLike = () => {
         if(isLike){
@@ -38,6 +44,10 @@ export default function FloatTab(){
         document.body.removeChild(t);
 
         toast.success("현재 주소가 복사되었습니다.");
+        setIsCopy(true);
+        setTimeout(() => {
+            setIsCopy(false);
+        }, 500);
     };
 
     return(
@@ -47,14 +57,14 @@ export default function FloatTab(){
                 reverseOrder={false}
             />
             <ul className={styles.float_wrap}>
-                <li onClick={handleMoveTop}>
+                <li className={isMove ? styles.like : ""} onClick={handleMoveTop}>
                     <i><MdKeyboardArrowUp size={40} /></i>
                 </li>
                 <li className={isLike ? styles.like : ""} onClick={handleLike}>
                     <i><PiMusicNotesFill size={30} /></i>
                 </li>
                 <span>{likeNum}</span>
-                <li onClick={copyURL}>
+                <li className={isCopy ? styles.like : ""} onClick={copyURL}>
                     <i><SlPaperClip size={25} /></i>
                 </li>
             </ul>
