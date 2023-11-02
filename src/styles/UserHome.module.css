@@ -1,6 +1,7 @@
 .UserHome{
     margin: 50px auto 100px;
     width: 1024px;
+    position: relative;
 }
 .user_info_wrap{
     display: flex;
@@ -34,8 +35,8 @@
 }
 
 .category_wrap{
-    position: fixed;
-    right: 10%; top: 35%;
+    position: absolute;
+    right: -22%; top: 21%;
     width: 150px;
 }
 .category_wrap > span{
